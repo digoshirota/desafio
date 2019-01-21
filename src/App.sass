@@ -1,0 +1,392 @@
+
+// generic transform
+@mixin transform($transforms) 
+	-moz-transform: $transforms
+	-o-transform: $transforms
+	-ms-transform: $transforms
+	-webkit-transform: $transforms
+	transform: $transforms
+
+// translate
+@mixin translate ($x, $y) 
+   @include transform(translate($x, $y))
+
+.hide
+	display: none 
+.show
+	display: block !important
+
+header
+	.login	
+		background-color: #000
+		> div
+			max-width: 1238px
+			margin: 0 auto
+			height: 30px
+			display: flex
+			justify-content: flex-end
+		a, span
+			color: #fff
+			margin: 2px 5px 0 0
+		a:last-child
+			margin-right: 0
+
+	.wrapper
+		max-width: 1238px
+		margin: 0 auto
+		height: 115px
+		display: flex
+		position: relative
+	.busca
+		margin-left: auto
+		input
+			width: 413px
+			border: 1px solid #000
+			height: 42px
+			vertical-align: top
+		button
+			background-color: #cc0d1f
+			color: #fff
+			font-weight: 800
+			border: none
+			height: 44px
+			vertical-align: top
+			width: 110px
+		.form
+			@include translate(0,-50%)
+			top: 50%
+			position: relative
+
+	.logo
+		position: relative
+		img
+			@include translate(0,-50%)
+			top: 50%
+			position: relative
+			left: -3px
+	.menu
+		background-color:#cc0d1f
+		nav
+			max-width: 1238px
+			margin: 0 auto
+			height: 55px
+		ul
+			display: flex
+			list-style: none	
+			li
+				margin: 17px 75px 0 0
+				a
+					font-weight: 800
+					color: #fff
+					text-decoration: none
+					text-transform: uppercase
+
+.product-list
+	.breadcumb
+		max-width: 1238px
+		margin: 0 auto
+		padding: 26px 0
+		a
+			color: #020202
+			text-decoration: none
+			font-size: 14px
+		span
+			color: #cc0d1f
+			font-size: 14px
+	.container
+		max-width: 1238px
+		margin: 0 auto
+	.filter
+		display: inline-block
+		width: 18%
+		vertical-align: top
+		border: 1px solid #e2dedd
+		padding: 20px
+		h2
+			font-weight: 800
+			color: #cc0d1f
+			margin: 0 0 17px 0
+		h3
+			font-weight: 800
+			color: #63918e
+			font-size: 18px
+			margin: 0 0 17px 0
+		.categ
+			margin: 0 0 17px 20px
+			color: #616161
+			li
+				cursor: pointer 
+			a
+				color: #616161
+				text-decoration: none
+		.gender
+			margin: 0 0 17px 0
+			color: #616161
+			li
+				color: #616161
+				margin: 0 0 0px 20px
+				cursor: pointer 
+		.colors
+			margin: 0 0 17px 0px
+			color: #616161
+			list-style: none
+			li
+				width: 48px
+				height: 25px
+				display: inline-block
+				vertical-align: top
+				margin: 0 5px 5px 0
+				cursor: pointer 
+			.black
+				background-color: #000
+			.orange
+				background-color: orange
+			.yellow
+				background-color: yellow
+			.rosa
+				background-color: deeppink
+			.cinza
+				background-color: gray
+			.azul
+				background-color: blue
+			.beje
+				background-color: #f5f5dc
+	.wrapper
+		display: inline-block
+		width: 76.9%
+		vertical-align: top
+		padding: 0 0 0 20px
+
+.prods
+	h1
+		text-transform: capitalize
+		color: #cc0d1f
+		font-size: 35px
+		border-bottom: 1px solid #e2dedd
+		padding: 0 0 10px 0
+.ordenar
+	padding: 5px 0
+	border-bottom: 1px solid #e2dedd
+	.blocks
+		background-image: url(/assets/img/menu.png)
+		width: 25px
+		height: 26px
+		display: inline-block
+		background-repeat: no-repeat
+		background-size: 21px
+		margin: 10px 10px 0 0
+		cursor: pointer
+		&.active
+			background-image: url(/assets/img/menu-o.png)
+	.lists
+		background-image: url(/assets/img/list.png)
+		width: 25px
+		height: 25px
+		display: inline-block
+		background-repeat: no-repeat
+		cursor: pointer
+		&.active
+			background-image: url(/assets/img/list-o.png)
+
+	.orderby
+		display: inline-block
+		vertical-align: top
+		margin: 8px 0 0 0
+		float: right
+		span
+			font-size: 12px
+			color: #7f7e83
+			margin: 0 10px 0 0
+		select
+			border: 1px solid #e2dedd
+			padding: 3px 20px
+			border-radius: 6px
+
+.vitrine::after 
+  content: ""
+  flex: auto
+
+.vitrine
+	padding: 30px 0
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	margin: 0 -14px
+	.list
+		width: 22.33%
+		margin: 0 0 20px 0
+		padding: 0px 13px
+		&.width100
+			width: 100%
+	.list:after
+		content: ''
+		flex: auto
+
+	h2
+		font-size: 18px
+		color: #616161
+		font-weight: 400
+		text-align: center
+		padding: 10px 0 20px 0
+		min-height: 50px
+		overflow: hidden
+	h3
+		color: #cd0e20
+		font-size: 25px
+		text-align: center
+		padding: 0 0 15px 0
+	a
+		background-color: #80bdb8
+		color: #fff
+		font-weight: 800
+		display: block
+		padding: 15px 0
+		border-radius: 5px
+		text-align: center
+		text-decoration: none
+	.img-product
+		border: 1px solid #e2dedd
+		min-height: 233px
+		height: 233px
+		position: relative
+		img
+			width: 100%
+			padding: 10px
+			position: absolute
+			top: 50%
+			left: 50%
+			max-width: 189px
+			@include translate(-50%,-50%)
+			max-height: 211px
+
+.remover p
+	cursor: pointer
+			  
+
+@media (max-width: 767px)
+
+	header
+		.login
+			>div
+				justify-content: center
+		.menu-icon 
+			display: block
+			margin: 22px 15% 0 0
+		.logo
+			left: 50%
+			top: 50%
+			@include translate(-50%,-50%)
+			position: absolute
+			img
+				width: 180px
+				@include translate(0%,0%)
+				top: inherit
+		.busca
+			display: none
+			margin: inherit
+			position: absolute
+			top: 123px
+		.busca-icon
+			display: block
+			position: absolute
+			right: 15px	
+			top: 50%
+			@include translate(0%,-50%)
+		.wrapper
+			height: 80px
+			padding: 0 15px
+		.menu
+			display: none
+			nav
+				padding: 0 15px
+				height: auto
+			ul
+				flex-wrap: wrap
+				li
+					margin: 3px 6% 3px 0
+		.form
+			transform: none
+			top: inherit
+			input
+				width: 100%	
+
+	.product-list .breadcumb
+		padding: 26px 15px
+	.product-list .filter 
+	    display: block
+	    width: 85%
+	.blocks, .lists
+		display: none !important
+	.prods h1
+		border: none
+		padding: 25px 0 5px 0
+	.ordenar
+		border: none
+	.product-list .wrapper 
+		width: 100%
+		padding: 0
+	.ordenar .orderby 
+		float: none
+	.vitrine .list 	
+	    width: 41%
+	.product-list .container 
+		padding: 0 15px
+	.vitrine .img-product 
+		min-height: inherit
+		height: 180px
+	.vitrine .img-product img 
+		max-width: 105px
+		max-height: 170px
+	.vitrine:after
+		display: none
+
+
+@media (min-width: 768px)  and (max-width: 1023px)
+	.login
+		padding: 0 15px
+	header
+		.wrapper
+			padding: 0 15px
+		nav
+			padding: 0 15px
+		.menu
+			ul
+				li
+					margin: 17px 0px 0 9.7%
+					&:first-child
+						margin: 17px 0
+	.product-list
+		padding: 0 15px
+		.wrapper
+			width: 72.9%
+		.list	
+			width: 28.33%
+
+
+@media (min-width: 1024px) and (max-width: 1439px)
+	.login
+		padding: 0 15px
+	header
+		.wrapper
+			padding: 0 15px
+		nav
+			padding: 0 15px
+		.menu
+			ul
+				li
+					margin: 17px 0px 0 9.7%
+					&:first-child
+						margin: 17px 0
+	.product-list
+		padding: 0 15px
+		.wrapper
+			width: 74.9%
+		.list	
+			width: 21.33%
+			img
+				max-width: 142px
+
+
+
+		
+
