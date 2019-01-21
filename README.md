@@ -3,7 +3,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Faltou fazer devido a falta de tempo:(eu sei fazer essas features)
 
 Ordenar por preço e nome
+
 Lazy load nas imagens
+
 Paginação na vitrine
 
 
