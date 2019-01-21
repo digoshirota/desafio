@@ -1,10 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Faltou fazer devido a falta de tempo:(eu sei fazer essas features)
+#Faltou fazer devido a falta de tempo:(eu sei fazer essas features)
 
-Ordenar por preço e nome
-Lazy load nas imagens
-Paginação na vitrine
+#Ordenar por preço e nome
+#Lazy load nas imagens
+#Paginação na vitrine
 
 
 ## Available Scripts
